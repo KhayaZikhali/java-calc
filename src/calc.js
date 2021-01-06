@@ -20,16 +20,24 @@ class Main extends React.Component {
     return (
         <div className="main">
           <div className="display">{this.state.instrument}</div>  
-            <button className="btn btn-primary" onClick={this.lings}>1</button>
-            <button className="btn btn-primary" onClick={this.lings}>2</button>
-            <button className="btn btn-primary" onClick={this.lings}>3</button>
-            <button className="btn btn-primary" onClick={this.lings}>4</button>
-            <button className="btn btn-primary" onClick={this.lings}>5</button>
-            <button className="btn btn-primary" onClick={this.lings}>6</button>
-            <button className="btn btn-primary">7</button>
-            <button className="btn btn-primary">8</button>
-            <button className="btn btn-primary">9</button>
-            <button className="btn btn-danger">0</button>
+            <button className="btn btn-lg btn-danger"  id="cancel">AC</button>
+              <button className="btn btn-lg btn-secondary" id="divide">/</button>
+              <button className="btn btn-lg btn-secondary" id="add">+</button>
+              <button className="btn btn-lg btn-secondary" id="subtract">-</button>
+              <button className="btn btn-lg btn-secondary" id="multiply">*</button>
+            <button className="btn btn-primary btn-click" id='nine'>9</button>
+            <button className="btn btn-primary btn-click" id='eight'>8</button>
+            <button className="btn btn-primary btn-click" id='seven'>7</button>
+            <button className="btn btn-primary btn-click" id='six'>6</button>
+            <button className="btn btn-primary btn-click" id='five'>5</button>
+            <button className="btn btn-primary btn-click" id='four'>4</button>
+            <button className="btn btn-primary btn-click" id='three'>3</button>
+            <button className="btn btn-primary btn-click" id='two'>2</button>
+            <button className="btn btn-primary btn-click" id='one'>1</button>
+            <button className="btn btn-primary btn-click" id='point'>.</button>
+            <button className="btn btn-primary btn-click" id='equal'>=</button>
+            
+            <button className="btn btn-primary btn-click" id="zero">0</button>
         </div>
     )
  }
