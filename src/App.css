@@ -4,11 +4,9 @@
   height:100vh;
   width:100vw;
 }
-
 h1 {
   color:crimson
 }
-
 .main {
   width:330px;
   height:70vh;
@@ -26,13 +24,9 @@ h1 {
   "four five six multiply " 
   "one two three equal " 
   "zero zero point equal ";
+ 
   
 }
-
-.btn {
-  border: 2px solid black
-}
-
 .display {
   width: 100%;
   height:100%;
@@ -44,21 +38,20 @@ h1 {
   color:white;
   padding-top:5%;
   text-align:right;
+  overflow:scroll;
 }
 .btn-click{
   width:100%;
   height:100%;
   border:4px solid black;
 }
-.functions {
-  height: 8vh;
+
+#equal{
+  background-color:green;
+  font-size:40px;
 }
-.keypad{
-  background-color: rgb(0,0,0);
-  height: 70%;
-  width:75%;
-}
-#cancel {
+
+#reset {
   grid-area:cancel;
 }
 #subtract {
@@ -90,6 +83,9 @@ h1 {
 }
 #seven {
   grid-area:seven;
+}
+#six{
+  grid-area:six;
 }
 #nine {
   grid-area:nine;
