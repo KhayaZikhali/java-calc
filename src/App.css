@@ -23,7 +23,7 @@ h1 {
   "seven eight nine divide " 
   "four five six multiply " 
   "one two three equal " 
-  "zero zero point equal "; 
+  "zero zero decimal equal "; 
 }
 .display {
   width: 100%;
@@ -88,9 +88,9 @@ h1 {
 #nine {
   grid-area:nine;
 }
-#point {
+#decimal {
   grid-area:point
 }
-#equal {
+#equals {
   grid-area:equal;
 }
