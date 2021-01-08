@@ -9,16 +9,16 @@ class Main extends React.Component {
       this.state = {
        display  : " "
       };
-      this.reset = this.reset.bind(this)
+      this.clear = this.clear.bind(this)
       this.handleClick = this.handleClick.bind(this)
       this.equal = this.equal.bind(this)
       this.handleKeyPress =this.handleKeyPress.bind(this)
     }
  //  add event listeners  
-
     // handles when the button is clicked on using the cursor 
     handleClick = (value) => {
         this.setState({ display : this.state.display + value})
+        console.log(this.state.display)
       }
 
     // handles when the button is clicked on using the cursor   
@@ -31,6 +31,7 @@ class Main extends React.Component {
     }
 
 // remove the bug that occurs when the zero button is pressed
+
 // return the result of the 
       equal(){
           try {
@@ -51,6 +52,7 @@ class Main extends React.Component {
         this.setState (state =>{ 
             return {display : 0 }})
     }
+    
     render() {
     return (
         <div className="main">
@@ -61,7 +63,7 @@ class Main extends React.Component {
             <button className="btn btn-lg btn-secondary" id="subtract"onClick={()=>this.handleClick("-")} onKeyPress={() => this.handleKeyPress("-")} >-</button>
             <button className="btn btn-lg btn-secondary" id="multiply" onClick={()=>this.handleClick("*")} onKeyPress={() => this.handleKeyPress("*")} >*</button>
             <button className="btn button-secondary btn-lg" id='equals' onClick={this.equal} onKeyPress={() => this.handleKeyPress("=")}>=</button>
-            <button className="btn btn-primary btn-click" id='nine' onClick={()=>this.handleClick(9)} onKeyPress={()=>this.handleKeyPress(9)}>9</button>
+            <button className="btn btn-primary btn-click" id='nine' onClick={()=>this.handleClick("9")} onKeyPress={()=>this.handleKeyPress(9)}>9</button>
             <button className="btn btn-primary btn-click" id='eight' onClick={()=>this.handleClick(8)} onKeyPress={() => this.handleKeyPress(8)}>8</button>
             <button className="btn btn-primary btn-click" id='seven' onClick={()=>this.handleClick(7)} onKeyPress={() => this.handleKeyPress(7)}>7</button>
             <button className="btn btn-primary btn-click" id='six' onClick={()=>this.handleClick(6)} 
@@ -73,7 +75,7 @@ class Main extends React.Component {
             <button className="btn btn-primary btn-click" id='one' onClick={()=>this.handleClick(1)}onKeyPress={() => this.handleKeyPress(1)}>1</button>
             <button className="btn btn-primary btn-click" id='decimal' onClick={()=>this.handleClick(".")} 
             onKeyPress={() => this.handleKeyPress(".")}>.</button>
-            <button className="btn btn-primary btn-click" id="zero" onClick={()=>this.handleClick(0)} onKeyPress={() => this.handleKeyPress(5)}>0</button>
+            <button className="btn btn-primary btn-click" id="zero" onClick={()=>this.handleClick("0")} onKeyPress={()=>this.handleKeyPress(5)}>0</button>
         </div>
     )
  }
