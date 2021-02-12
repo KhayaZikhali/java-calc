@@ -2,22 +2,21 @@ import React from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-document.addEventListener('keypress', ()=>{
-    console.log(KeyboardEvent.value)
-} )
 
 // find a way to display the numbers that a re clicked on to the display
 class Main extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-       display  : " "
+       display : " "
       };
       //key bindings
       this.clear = this.clear.bind(this)
       this.handleClick = this.handleClick.bind(this)
-      this.thousand = this.thousand.bind(this)
       this.equal = this.equal.bind(this)
+      this.thousand = this.thousand.bind(this)
+      this.million = this.million.bind(this)
+      this.billion = this.billion.bind(this)
       this.handleKeyPress =this.handleKeyPress.bind(this)
     }
     //Key board event listener
@@ -37,6 +36,7 @@ class Main extends React.Component {
             this.setState(state=>{
                 return{display : eval(this.state.display)}
             })
+
     }
     // Catch the error if a non integer is entered 
         catch(err){ 
@@ -52,16 +52,16 @@ class Main extends React.Component {
          this.setState({ display : this.state.display + "000"})
         }
       }
-       million(){
-         this.state.display !=="" ? this.setState ({ display : this.state.display + "000000"});
-       }
-
-       billion(){
+        million(){
+         if(this.state.display !== ""){
+         this.setState({ display : this.state.display + "000000"})
+        }
+      }
+        billion(){
          if(this.state.display !== ""){
          this.setState({ display : this.state.display + "000000000"})
         }
       }
-
       
     // clears the display and return zero   
     clear(){
@@ -90,10 +90,10 @@ class Main extends React.Component {
             <button className="btn btn-primary btn-click" id='one' onClick={()=>this.handleClick(1)} >1</button>
             <button className="btn btn-primary btn-click" id='decimal' onClick={()=>this.handleClick(".")} 
             >.</button>
-            <button className="btn btn-primary btn-click" id="zero" onClick={()=>this.handleClick("0")} onKeydown={()=>this.handleKeyPress(0)}>0</button>
-            <button class="magnitude" id="thousand" onClick={this.thousand}> Thousand </button>
-            <button class="magnitude" onClick={this.million}>Million</button>
-            <button class="magnitude" onClick={this.billion} >Billion</button>
+            <button className="btn btn-primary btn-click" id="zero" onClick={()=>this.handleClick("0")} onKeyDown={()=>this.handleKeyPress(0)}>0</button>
+            <button className="magnitude" onClick={this.thousand}> Thousand </button>
+            <button className="magnitude" onClick={this.million} >Million</button>
+            <button className="magnitude" onClick={this.billion} >Billion</button>
         </div>
     )
  }
