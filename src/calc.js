@@ -36,7 +36,6 @@ class Main extends React.Component {
             this.setState(state=>{
                 return{display : eval(this.state.display)}
             })
-
     }
     // Catch the error if a non integer is entered 
         catch(err){ 
@@ -45,20 +44,20 @@ class Main extends React.Component {
                 return{display : "NaN"}
             })
         }
-}   
+    }   
        //** Handles Click eventfor the three accesorry buttons at the bottom of the screen 
        thousand(){
-         if(this.state.display !== ""){
+         if(this.state.display !== " " && this.state.display !== "0"){
          this.setState({ display : this.state.display + "000"})
         }
       }
         million(){
-         if(this.state.display !== ""){
+         if(this.state.display !== " " && this.state.display !== "0"){
          this.setState({ display : this.state.display + "000000"})
         }
       }
         billion(){
-         if(this.state.display !== ""){
+         if(this.state.display !== " " && this.state.display !== "0"){
          this.setState({ display : this.state.display + "000000000"})
         }
       }
@@ -91,18 +90,14 @@ class Main extends React.Component {
             <button className="btn btn-primary btn-click" id='decimal' onClick={()=>this.handleClick(".")} 
             >.</button>
             <button className="btn btn-primary btn-click" id="zero" onClick={()=>this.handleClick("0")} onKeyDown={()=>this.handleKeyPress(0)}>0</button>
-            <button className="magnitude" onClick={this.thousand}> Thousand </button>
-            <button className="magnitude" onClick={this.million} >Million</button>
-            <button className="magnitude" onClick={this.billion} >Billion</button>
+            <button className="btn thou btn-click btn-secondary" onClick={this.thousand}> Thousand </button>
+            <button className="btn thous btn-click btn-secondary" onClick={this.million} >Million</button>
+            <button className="btn btn-click btn-secondary" onClick={this.billion} >Billion</button>
         </div>
     )
  }
 }
 
-
-// ! Add autocomplete support for the number 
-// ? i.e enable the user to click a button to add the neccesary number of zeros for billions
-// ? instead of having to manually type in all those zeros
 // ** COMPLETE THE SITE AND AT LEAST ONE PROJECT FROM YOUR LEARN LIST
 
 

@@ -89,3 +89,11 @@ h1 {
 .btn-removal {
   display: none;
 }
+
+.thou {
+  width: 120%;
+}
+
+.thous {
+margin-left:10px ;
+}
