@@ -38,11 +38,7 @@ h1 {
   text-align:right;
   overflow:scroll;
 }
-.btn-click{
-  width:100%;
-  height:100%;
-  border:4px solid black;
-}
+
 #equals{
   font-size:40px;
   grid-area:equals
@@ -88,4 +84,12 @@ h1 {
 }
 #decimal {
   grid-area:decimal
+}
+
+.btn-removal {
+  display: none;
+}
+
+.magnitude {
+  
 }
