@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
+//! This code uses eval()..Please use carefully
 // find a way to display the numbers that a re clicked on to the display
 class Main extends React.Component {
     constructor(props) {
